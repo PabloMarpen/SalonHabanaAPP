@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall2">
+
+    <Button
+        android:id="@+id/SiguienteButton1"
+        android:layout_width="246dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="136dp"
+        android:background="@drawable/blue_button_style"
+        android:fontFamily="@font/worksansregular"
+        android:text="Siguiente paso"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerTipoEvento"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/spinnerTipoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTipoEvento" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="266dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/worksansextrabold"
+        android:text="Personaliza tu experiencia"
+        android:textColor="#7E47A2"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerFecha"
+        android:layout_width="271dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/spinnerTipoEvento"
+        android:layout_width="271dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerFecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinnerFecha"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFecha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

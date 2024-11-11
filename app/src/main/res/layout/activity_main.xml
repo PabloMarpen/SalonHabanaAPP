@@ -6,27 +6,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#141414">
+    android:background="@drawable/wall">
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/SiguienteButton1"
         android:layout_width="246dp"
         android:layout_height="55dp"
+        android:layout_marginTop="224dp"
         android:background="@drawable/blue_button_style"
+        android:fontFamily="@font/worksansregular"
         android:text="Siguiente paso"
         android:textColor="@color/white"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="499dp" />
+        app:layout_constraintEnd_toEndOf="@+id/tlf"
+        app:layout_constraintStart_toStartOf="@+id/tlf"
+        app:layout_constraintTop_toBottomOf="@+id/tlf" />
 
-    <View
-        android:id="@+id/circle"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/circulo"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="220dp" />
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="308dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/worksansregular"
+        android:hint="Ingrese su nombre"
+        android:padding="12dp"
+        android:textColor="#DFDFDF"
+        android:textColorHint="#888888"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/tlf"
+        android:layout_width="308dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/worksansregular"
+        android:hint="Ingrese su telefono"
+        android:padding="12dp"
+        android:textColor="#DFDFDF"
+        android:textColorHint="#888888"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/nombre"
+        app:layout_constraintStart_toStartOf="@+id/nombre"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="266dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/worksansextrabold"
+        android:text="Primeros pasos"
+        android:textColor="#7E47A2"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
