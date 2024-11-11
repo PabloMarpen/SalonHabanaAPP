@@ -1,14 +1,24 @@
 <resources>
     <string name="app_name">SalonHabanaAPP</string>
     <string-array name="dates_array">
+        <item> </item>
         <item>01/01/2024</item>
         <item>02/01/2024</item>
         <item>03/01/2024</item>
     </string-array>
 
     <string-array name="event_types_array">
+        <item> </item>
         <item>Banquete</item>
         <item>Jornada</item>
         <item>Congreso</item>
+    </string-array>
+
+    <string-array name="tipo_cocina">
+        <item> </item>
+        <item>bufé</item>
+        <item>carta</item>
+        <item>pedir cita con el chef</item>
+        <item>no precisa</item>
     </string-array>
 </resources>

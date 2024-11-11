@@ -6,28 +6,72 @@
     android:layout_height="match_parent"
     android:background="@drawable/wall2">
 
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="287dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="48dp"
+        android:progressBackgroundTint="#FFFFFF"
+        android:progressBackgroundTintMode="src_in"
+        android:progressTint="#317EDD"
+        android:thumbTint="#BB76FF"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerTipoEvento"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="@+id/spinnerTipoEvento"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="179dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="560dp"
+        android:fontFamily="@font/worksanslight"
+        android:text="Numero personas"
+        android:textAlignment="viewStart"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPersonas"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="560dp"
+        android:fontFamily="@font/worksanssemibold"
+        android:text="0"
+        android:textAlignment="viewStart"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/SiguienteButton1"
         android:layout_width="246dp"
         android:layout_height="55dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="236dp"
         android:background="@drawable/blue_button_style"
         android:fontFamily="@font/worksansregular"
         android:text="Siguiente paso"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/spinnerTipoEvento"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="@+id/spinnerTipoEvento"
         app:layout_constraintTop_toBottomOf="@+id/spinnerTipoEvento" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="266dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="272dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/worksansextrabold"
         android:text="Personaliza tu experiencia"
+        android:textAlignment="center"
         android:textColor="#7E47A2"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,28 +79,118 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="91dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="176dp"
+        android:fontFamily="@font/worksanslight"
+        android:text="Fecha"
+        android:textAlignment="center"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="74dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="304dp"
+        android:fontFamily="@font/worksanslight"
+        android:text="Tipo"
+        android:textAlignment="center"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Spinner
         android:id="@+id/spinnerFecha"
-        android:layout_width="271dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="84dp"
+        android:layout_width="308dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/spinner_background"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.264"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Spinner
         android:id="@+id/spinnerTipoEvento"
-        android:layout_width="271dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="308dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/spinner_background"
         app:layout_constraintEnd_toEndOf="@+id/spinnerFecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/spinnerFecha"
         app:layout_constraintTop_toBottomOf="@+id/spinnerFecha" />
+
+    <Spinner
+        android:id="@+id/spinnerTipoCocina"
+        android:layout_width="308dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerFecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinnerFecha"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFecha" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerTipoCocina"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="211dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="436dp"
+        android:fontFamily="@font/worksanslight"
+        android:text="Tipo de cocina"
+        android:textAlignment="viewStart"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerFecha"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerTipoEvento"
+        app:srcCompat="@android:drawable/arrow_down_float" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
