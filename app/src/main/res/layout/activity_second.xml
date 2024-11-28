@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/wall2">
 
-    <SeekBar
-        android:id="@+id/seekBar2"
-        android:layout_width="287dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="48dp"
-        android:progressBackgroundTint="#FFFFFF"
-        android:progressBackgroundTintMode="src_in"
-        android:progressTint="#317EDD"
-        android:thumbTint="#BB76FF"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerTipoEvento"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toStartOf="@+id/spinnerTipoEvento"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="179dp"
@@ -50,16 +36,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <SeekBar
+        android:id="@+id/seekBarDias"
+        android:layout_width="287dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="48dp"
+        android:progressBackgroundTint="#FFFFFF"
+        android:progressBackgroundTintMode="src_in"
+        android:progressTint="#317EDD"
+        android:thumbTint="#FCAA20"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerTipoEvento"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/spinnerTipoEvento"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
     <Button
-        android:id="@+id/SiguienteButton1"
+        android:id="@+id/SiguienteButton2"
         android:layout_width="246dp"
         android:layout_height="55dp"
         android:layout_marginTop="236dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/blue_button_style"
         android:fontFamily="@font/worksansregular"
         android:text="Siguiente paso"
         android:textColor="@color/white"
         android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/spinnerTipoEvento"
         app:layout_constraintStart_toStartOf="@+id/spinnerTipoEvento"
         app:layout_constraintTop_toBottomOf="@+id/spinnerTipoEvento" />
@@ -72,7 +74,7 @@
         android:fontFamily="@font/worksansextrabold"
         android:text="Personaliza tu experiencia"
         android:textAlignment="center"
-        android:textColor="#7E47A2"
+        android:textColor="#FCAA20"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

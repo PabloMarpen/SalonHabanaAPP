@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall2">
+
+    <Button
+        android:id="@+id/SiguienteButtonThree"
+        android:layout_width="246dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/blue_button_style"
+        android:fontFamily="@font/worksansregular"
+        android:text="Enviar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarHabitaciones" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="272dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/worksansextrabold"
+        android:text="Tipo de evento congreso"
+        android:textAlignment="center"
+        android:textColor="#FCAA20"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NumeroDias"
+        android:layout_width="181dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="176dp"
+        android:fontFamily="@font/worksanslight"
+        android:text="Numero de días"
+        android:textAlignment="center"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDias"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="176dp"
+        android:fontFamily="@font/worksanssemibold"
+        android:text="0"
+        android:textAlignment="viewStart"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarDias"
+        android:layout_width="287dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:progressBackgroundTint="#FFFFFF"
+        android:progressBackgroundTintMode="src_in"
+        android:progressTint="#317EDD"
+        android:thumbTint="#FCAA20"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/NumeroDias" />
+
+    <TextView
+        android:id="@+id/NumeroHabitaciones"
+        android:layout_width="201dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="288dp"
+        android:fontFamily="@font/worksanslight"
+        android:text="Numero de habitaciones"
+        android:textAlignment="center"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textHabitaciones"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="304dp"
+        android:fontFamily="@font/worksanssemibold"
+        android:text="0"
+        android:textAlignment="viewStart"
+        android:textColor="#CFCFCF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarHabitaciones"
+        android:layout_width="287dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:progressBackgroundTint="#FFFFFF"
+        android:progressBackgroundTintMode="src_in"
+        android:progressTint="#317EDD"
+        android:thumbTint="#FCAA20"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarDias"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/seekBarDias"
+        app:layout_constraintTop_toBottomOf="@+id/NumeroHabitaciones" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
