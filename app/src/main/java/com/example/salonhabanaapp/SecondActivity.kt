@@ -143,7 +143,7 @@ class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     fun comprobarCampos(): Boolean {
 
-        if (tipoEvento.isNullOrEmpty() || tipoCocina.isNullOrEmpty() || personas.text.isNullOrEmpty() || tvSelectedDate.isNullOrEmpty()) {
+        if (tipoEvento.isNullOrEmpty() || tipoCocina.isNullOrEmpty() || personas.text == "0" || tvSelectedDate.isNullOrEmpty()) {
             return false
         } else {
             return true

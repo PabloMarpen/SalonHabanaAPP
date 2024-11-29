@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.isDigitsOnly
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         SiguienteButtonVista1.setOnClickListener {
             if (tlf.text.toString() == "" || nombre.text.toString() == ""){
                 Toast.makeText(this, "Introduce todos los campos porfavor", Toast.LENGTH_SHORT).show()
+            }else if(tlf.text.isDigitsOnly() == false){
+                Toast.makeText(this, "Telefono incorrecto", Toast.LENGTH_SHORT).show()
             }else{
                 val intent = Intent(this, SecondActivity::class.java)
                 startActivity(intent)
