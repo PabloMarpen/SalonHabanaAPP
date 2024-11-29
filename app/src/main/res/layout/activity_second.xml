@@ -112,40 +112,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinnerFecha"
-        android:layout_width="308dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/spinner_background"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Spinner
         android:id="@+id/spinnerTipoEvento"
         android:layout_width="308dp"
         android:layout_height="61dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/spinner_background"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerFecha"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/spinnerFecha"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerFecha" />
+        app:layout_constraintEnd_toEndOf="@+id/buttonFecha"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/buttonFecha"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFecha" />
 
     <Spinner
         android:id="@+id/spinnerTipoCocina"
         android:layout_width="308dp"
         android:layout_height="61dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/spinner_background"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerFecha"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerTipoEvento"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/spinnerFecha"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerFecha" />
+        app:layout_constraintStart_toStartOf="@+id/spinnerTipoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -174,17 +160,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spinnerFecha"
-        app:srcCompat="@android:drawable/arrow_down_float" />
-
-    <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -194,5 +169,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spinnerTipoEvento"
         app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <Button
+        android:id="@+id/buttonFecha"
+        android:layout_width="253dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/grey_button_style"
+        android:text="Seleccionar fecha"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

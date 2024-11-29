@@ -1,4 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.SalonHabanaAPP" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Tema oscuro -->
+    <style name="Base.Theme.SalonHabanaAPP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item> <!-- Color primario (barra de acción, etc.) -->
+        <item name="android:windowBackground">@color/black</item> <!-- Fondo de la ventana -->
+        <item name="android:textColorPrimary">@color/white</item> <!-- Color del texto principal -->
     </style>
+
+    <style name="Theme.SalonHabanaAPP" parent="Base.Theme.SalonHabanaAPP" />
 </resources>

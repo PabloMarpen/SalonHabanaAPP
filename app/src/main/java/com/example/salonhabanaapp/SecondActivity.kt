@@ -1,26 +1,32 @@
 package com.example.salonhabanaapp
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.DatePicker
 import android.widget.SeekBar
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
 class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     lateinit var spinnerEvento: Spinner
-    lateinit var spinnerFecha: Spinner
     lateinit var spinnerCocina: Spinner
     lateinit var tipoEvento : String
-    lateinit var fecha : String
     lateinit var tipoCocina : String
     lateinit var personas : TextView
+    lateinit var fechaButton : Button
+    lateinit var tvSelectedDate : String
+    private val calendar = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,9 +34,10 @@ class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         setContentView(R.layout.activity_second)
 
         spinnerEvento = findViewById(R.id.spinnerTipoEvento)
-        spinnerFecha = findViewById(R.id.spinnerFecha)
         spinnerCocina = findViewById(R.id.spinnerTipoCocina)
         personas = findViewById(R.id.textPersonas)
+        fechaButton = findViewById(R.id.buttonFecha)
+        tvSelectedDate = ""
         val seekBar = findViewById<SeekBar>(R.id.seekBarDias)
         val SiguienteButtonVista2 = findViewById<Button>(R.id.SiguienteButton2)
         seekBar.min = 0
@@ -46,14 +53,6 @@ class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             spinnerEvento.adapter = adapter
         }
 
-        ArrayAdapter.createFromResource(
-            this,
-            R.array.dates_array,
-            R.layout.spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spinnerFecha.adapter = adapter
-        }
 
         ArrayAdapter.createFromResource(
             this,
@@ -66,7 +65,6 @@ class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
 
         spinnerEvento.onItemSelectedListener = this
-        spinnerFecha.onItemSelectedListener = this
         spinnerCocina.onItemSelectedListener = this
 
         spinnerEvento.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -101,21 +99,6 @@ class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             }
         }
 
-        spinnerFecha.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                val seleccionado = parent?.getItemAtPosition(position).toString()
-                fecha = seleccionado
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
 
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -137,6 +120,10 @@ class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         })
 
 
+        fechaButton.setOnClickListener(){
+            openDialog()
+        }
+
 
         SiguienteButtonVista2.setOnClickListener {
             if (tipoEvento.isNullOrEmpty() || comprobarCampos() == false) {
@@ -156,7 +143,7 @@ class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     fun comprobarCampos(): Boolean {
 
-        if (tipoEvento.isNullOrEmpty() || tipoCocina.isNullOrEmpty() || fecha.isNullOrEmpty() || personas.text.isNullOrEmpty()) {
+        if (tipoEvento.isNullOrEmpty() || tipoCocina.isNullOrEmpty() || personas.text.isNullOrEmpty() || tvSelectedDate.isNullOrEmpty()) {
             return false
         } else {
             return true
@@ -164,6 +151,32 @@ class SecondActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
 
     }
+
+    fun openDialog(){
+
+        val datePickerDialog = DatePickerDialog(
+            this, {DatePicker, year: Int, monthOfYear: Int, dayOfMonth: Int ->
+                // Create a new Calendar instance to hold the selected date
+                val selectedDate = Calendar.getInstance()
+                // Set the selected date using the values received from the DatePicker dialog
+                selectedDate.set(year, monthOfYear, dayOfMonth)
+                // Create a SimpleDateFormat to format the date as "dd/MM/yyyy"
+                val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                // Format the selected date into a string
+                val formattedDate = dateFormat.format(selectedDate.time)
+                // Update the TextView to display the selected date with the "Selected Date: " prefix
+                tvSelectedDate = "Fecha seleccionada: $formattedDate"
+                Toast.makeText(this, tvSelectedDate, Toast.LENGTH_SHORT).show()
+            },
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
+        // Show the DatePicker dialog
+        datePickerDialog.show()
+    }
+
+
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
     }
 
